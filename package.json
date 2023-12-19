@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run-app":"nodemon app.js",
+    "start":"pm2 start app.js --name app",
+    "stop": "pm2 stop app",
     "test": "mocha test/**/*.test.js"
   },
   "repository": {
