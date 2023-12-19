@@ -4,8 +4,12 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print greeting
-        run: echo "Welcome to Github Actions"
-      - name: Print goodbye
-        run: echo "Bye!! see you soon"
+      - name: Print Greeting
+        run: |
+          echo "Welcome"
+          echo "Bye"
+      # - name: Print greeting
+      #   run: echo "Welcome to Github Actions"
+      # - name: Print goodbye
+      #   run: echo "Bye!! see you soon"
       
