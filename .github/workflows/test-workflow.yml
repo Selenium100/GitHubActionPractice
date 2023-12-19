@@ -1,0 +1,17 @@
+name: test-node-application
+on: push
+jobs:
+    test-job:
+        runs-on: ubuntu:latest
+        steps:
+            - name: checkout latest code from git
+              uses: actions/checkout@v3
+            - name: install nodejs 18 version
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18
+            - name: install dependancies
+              run: npm ci
+            - name: run tests
+              run: npm test
+            
