@@ -16,4 +16,21 @@ jobs:
               run: npm start
             - name: stop application
               run: npm run stop
+
+    deploy-job:
+    needs: [test-job]
+        runs-on: ubuntu-20.04
+        steps:
+            - name: checkout latest code from git
+              uses: actions/checkout@v3
+            - name: install nodejs 18 version
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18
+            - name: install dependancies
+              run: npm ci
+            - name: start application
+              run: npm start
+            - name: Deploy application
+              run: echo "Deploying application in QA"
             
