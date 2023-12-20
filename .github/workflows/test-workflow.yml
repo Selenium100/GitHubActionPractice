@@ -16,9 +16,7 @@ jobs:
               run: npm start
             - name: stop application
               run: npm run stop
-
     deploy-job:
-    needs: [test-job]
         runs-on: ubuntu-20.04
         steps:
             - name: checkout latest code from git
