@@ -9,6 +9,7 @@ app.get('/',(req,res)=>{
 
 app.listen(PORT, ()=>{
     console.log(`Serverr is running on localhost:${PORT}`);
+    console.log(`Server is running onn localhost:${PORT}`);
 })
 
 module.exports = app;
