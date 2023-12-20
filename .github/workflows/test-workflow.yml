@@ -1,5 +1,9 @@
 name: test-node-application
-on: [push,workflow_dispatch]
+on:
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
 jobs:
     test-job:
         runs-on: ubuntu-20.04
