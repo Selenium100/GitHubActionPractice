@@ -1,5 +1,5 @@
 name: test-node-application
-on: push
+on: [push,workflow_dispatch]
 jobs:
     test-job:
         runs-on: ubuntu-20.04
